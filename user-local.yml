@@ -6,10 +6,14 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8095/eureka/
 
-
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
 
 leekyoungil:
   profile: i'm local
   said:
-    first: Hello local
-    second: Spring Cloud Config Server local~~~~~
+    first:  local
+    second: local~~~~~
