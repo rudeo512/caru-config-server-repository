@@ -2,6 +2,8 @@ server:
   port: 8094
 
 logging:
+  level:
+    root: debug
   pattern: 
     console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
 
