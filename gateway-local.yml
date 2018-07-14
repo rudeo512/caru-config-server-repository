@@ -24,10 +24,10 @@ spring:
         predicates:
         - Path=/user/**
         filters:
-        - RewritePath=/user/(?.*), /$\{path}
+        - RewritePath=/user/(?<path>.*), /$\{path}
       - id: organization
         uri: lb://organization
         predicates:
         - Path=/organization/**
         filters:
-        - RewritePath=/organization/(?.*), /$\{path}
+        - RewritePath=/organization/(?<path>.*), /$\{path}
