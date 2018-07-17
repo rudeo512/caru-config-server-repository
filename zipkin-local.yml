@@ -1,11 +1,19 @@
 server:
   port: 8099
 
+logging:
+  level:
+    root: debug
+  pattern: 
+    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+
 eureka:
-  instance:
-    hostname: localhost
   client:
-    registerWithEureka: false
-    fetchRegistry: false
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://localhost:8095/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
